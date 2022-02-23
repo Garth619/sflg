@@ -1,0 +1,41 @@
+#section-two {
+  padding: 0 25px;
+  @include mq(small_tablet) {
+    padding: 11px 88px 0;
+  }
+  @include mq(small_laptop) {
+    padding: 0 50px;
+    margin-top: 17px;
+  }
+  @include mq(large_laptop) {
+    padding: 0 30px;
+    margin-top: 56px;
+  }
+  @include mq(small_monitor) {
+    padding: 0 70px;
+  }
+}
+
+#sec-two-title {
+  display: block;
+  margin-bottom: 15px;
+  @include type(
+    (
+      size: 40px,
+      height: 45px,
+      family: $primaryfont,
+      align: center,
+      weight: 500,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 35px;
+  }
+  @include mq(small_laptop) {
+  }
+  @include mq(large_laptop) {
+    margin-bottom: 14px;
+  }
+}

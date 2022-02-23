@@ -1,0 +1,31 @@
+////////////////////////////////////////////////////////////////////
+// Colors
+////////////////////////////////////////////////////////////////////
+
+$purplelight: #7575cf;
+$purpledark: #5b59ad;
+
+$purplelightgradient: linear-gradient(
+  to bottom,
+  rgba(204, 204, 255, 1) 0%,
+  rgba(117, 117, 207, 1) 71%
+);
+
+$purpledarkgradient: linear-gradient(
+  to bottom,
+  rgba(117, 117, 207, 1) 0%,
+  rgba(84, 83, 166, 1) 75%
+);
+
+$orangelight: #fab56b;
+$orangedark: #e69641;
+
+$oranegradient: linear-gradient(
+  to bottom,
+  rgba(250, 181, 107, 1) 0%,
+  rgba(230, 150, 65, 1) 75%
+);
+
+$black: #272526;
+$grey: #ecf0f3;
+$white: #fff;

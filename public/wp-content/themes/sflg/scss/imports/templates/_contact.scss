@@ -1,0 +1,51 @@
+#contact-wrapper {
+  margin-bottom: 55px;
+  max-width: 400px;
+  padding-top: 20px;
+  @include margin_lr();
+  @include mq(small_laptop) {
+    padding-top: 0px;
+    max-width: 1166px;
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    max-width: 1256px;
+  }
+  .contact-col {
+    background: #fff;
+    box-shadow: 0px 3px 25px #00000029;
+    padding: 21px;
+    margin-bottom: 30px;
+    @include mq(small_tablet) {
+      width: 100%;
+    }
+    @include mq(small_laptop) {
+      flex-shrink: 0;
+      flex-basis: calc(33% - 20px);
+    }
+    @include mq(large_laptop) {
+      height: 329px;
+      flex-basis: calc(33% - 37px);
+    }
+    .contact-col-inner {
+      padding: 50px 8px;
+      height: 100%;
+      border: 1px solid $orangedark;
+    }
+  }
+  #contact-subtitle {
+    font-size: 17px;
+    font-family: $secondaryfont;
+    padding-top: 20px;
+  }
+  #contact-phone {
+    font-size: 40px;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $orangedark;
+    }
+  }
+  #lawpay {
+    margin-top: 15px;
+  }
+}

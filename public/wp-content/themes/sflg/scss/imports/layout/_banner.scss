@@ -1,0 +1,329 @@
+#banner-wrapper {
+  padding: 30px 40px 75px;
+  position: relative;
+  overflow: hidden;
+  @media screen and (min-width: 540px) {
+    padding: 30px 40px 100px;
+  }
+  @include mq(small_laptop) {
+    padding: 93px 40px 100px;
+  }
+  @include mq(large_laptop) {
+    padding: 93px 40px 135px;
+  }
+}
+
+#banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+#banner-title {
+  display: block;
+  max-width: 410px;
+  text-shadow: 0px 1px 40px #000000;
+  @include margin_lr();
+  @include type(
+    (
+      size: 28px,
+      height: 30px,
+      family: $primaryfont,
+      color: #fff,
+      weight: 500,
+      align: center,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 45px;
+    line-height: 50px;
+    max-width: 680px;
+  }
+  @include mq(small_laptop) {
+    max-width: 1070px;
+  }
+  @include mq(large_laptop) {
+    font-size: 50px;
+    line-height: 55px;
+    max-width: 1220px;
+  }
+  @include mq(small_monitor) {
+    font-size: 55px;
+    line-height: 60px;
+    max-width: 1400px;
+  }
+  &.h1-banner {
+    font-size: 35px;
+    @include mq(small_tablet) {
+      font-size: 45px;
+    }
+    @include mq(large_laptop) {
+      font-size: 50px;
+    }
+    @include mq(small_monitor) {
+      font-size: 55px;
+    }
+  }
+}
+
+#banner-image {
+  object-fit: cover;
+  @include box(100%, 100%);
+  @include abs(0, null, null, 0);
+}
+
+#banner-wave {
+  width: 660px;
+  @include abs(null, null, 0, 0px);
+  @media screen and (min-width: 540px) {
+    width: 960px;
+  }
+  @include mq(small_tablet) {
+    width: 1230px;
+    left: -209px;
+  }
+  @media screen and (min-width: 1015px) {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.banner-button.button-one {
+  display: none;
+  @include mq(small_tablet) {
+    display: block;
+    margin-top: 10px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 24px;
+    padding: 10px;
+  }
+  span {
+    @include mq(small_laptop) {
+      padding: 16px 0px 0px;
+    }
+  }
+}
+
+#banner-wrapper.att-banner {
+  background: $purpledark;
+  padding: 0;
+  text-align: center;
+  overflow: inherit;
+
+  @include mq(small_laptop) {
+  }
+
+  #banner-inner {
+    padding: 44px 30px 1px;
+    @include mq(small_tablet) {
+      padding: 52px 40px 1px;
+    }
+    @include mq(small_laptop) {
+      text-align: left;
+      padding: 146px 80px 80px;
+      @include flex(space-between);
+    }
+    @include mq(large_laptop) {
+      padding: 127px 140px 80px;
+    }
+    @include mq(small_monitor) {
+      max-width: 1690px;
+      @include margin_lr();
+    }
+  }
+  #banner-content {
+    display: inline-block;
+    @include mq(small_laptop) {
+      flex-grow: 1;
+      padding-left: 40px;
+      order: 2;
+    }
+    @include mq(small_monitor) {
+      padding-left: 82px;
+    }
+  }
+  #banner-title {
+    text-shadow: none;
+    max-width: 100%;
+    @include mq(small_tablet) {
+      font-size: 55px;
+      line-height: 55px;
+      padding: 0 60px;
+    }
+    @include mq(small_laptop) {
+      padding: 0px;
+      text-align: left;
+      @include margin_lr(0);
+    }
+    @include mq(large_laptop) {
+      font-size: 65px;
+      line-height: 65px;
+    }
+  }
+  .double-line {
+    margin-top: 26px;
+    margin-bottom: 12px;
+    &::before {
+      border-top: 1px dashed $white;
+    }
+    &::after {
+      border-top: 1px solid $white;
+    }
+  }
+  #banner-wave {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+  }
+  #banner-spacer {
+    position: relative;
+    z-index: 1;
+    margin-top: 39px;
+    margin-bottom: -190px;
+    @include mq(small_tablet) {
+      margin-bottom: -370px;
+    }
+    @include mq(small_laptop) {
+      flex-shrink: 0;
+      flex-basis: 430px;
+      order: 1;
+      margin-top: -18px;
+    }
+    @include mq(large_laptop) {
+      flex-basis: 504px;
+      margin-top: -6px;
+    }
+    @include mq(small_monitor) {
+      flex-basis: 544px;
+    }
+  }
+  .banner-position {
+    display: block;
+    @include type(
+      (
+        size: 20px,
+        height: 30px,
+        family: $secondaryfont,
+        color: $orangelight,
+        transform: uppercase,
+      )
+    );
+    @include mq(small_tablet) {
+      margin-top: 20px;
+    }
+    @include mq(small_laptop) {
+      //padding-left: 20px;
+    }
+  }
+}
+
+#banner-wrapper.debra-banner {
+  background: $purpledark;
+  padding: 0;
+  text-align: center;
+  overflow: inherit;
+  #banner-inner {
+    padding: 44px 20px 191px;
+    @include mq(small_tablet) {
+      padding: 52px 40px 133px;
+    }
+    @include mq(small_laptop) {
+      text-align: left;
+      padding: 146px 80px 80px;
+      @include flex(space-between);
+    }
+    @include mq(large_laptop) {
+      padding: 127px 130px 80px;
+    }
+    @include mq(small_monitor) {
+      max-width: 1690px;
+      padding: 127px 140px 116px;
+      @include margin_lr();
+    }
+  }
+  #banner-content {
+    display: inline-block;
+    @include mq(small_laptop) {
+      flex-grow: 1;
+      padding-left: 40px;
+      order: 2;
+    }
+    @include mq(large_laptop) {
+    }
+    @include mq(small_monitor) {
+      padding-left: 82px;
+      padding-right: 80px;
+    }
+  }
+  #banner-title {
+    text-shadow: none;
+    max-width: 100%;
+    @include mq(small_tablet) {
+      font-size: 55px;
+      line-height: 55px;
+      padding: 0 60px;
+    }
+    @include mq(small_laptop) {
+      padding: 0px;
+      text-align: left;
+      @include margin_lr(0);
+    }
+    @include mq(large_laptop) {
+      font-size: 65px;
+      line-height: 65px;
+    }
+  }
+  .double-line {
+    margin-top: 26px;
+    margin-bottom: 12px;
+    &::before {
+      border-top: 1px dashed $white;
+    }
+    &::after {
+      border-top: 1px solid $white;
+    }
+  }
+  #banner-wave {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+  }
+  #banner-spacer {
+    // position: relative;
+    // z-index: 1;
+    // margin-top: 39px;
+    // margin-bottom: 0px;
+    @include mq(small_tablet) {
+      margin-bottom: 0px;
+    }
+    @include mq(small_laptop) {
+      flex-shrink: 0;
+      flex-basis: 430px;
+      order: 1;
+    }
+    @include mq(large_laptop) {
+      flex-basis: 504px;
+    }
+    // @include mq(small_monitor) {
+    //   flex-basis: 544px;
+    // }
+  }
+  .banner-position {
+    display: block;
+    @include type(
+      (
+        size: 20px,
+        height: 30px,
+        family: $secondaryfont,
+        color: $orangelight,
+        transform: uppercase,
+      )
+    );
+    @include mq(small_tablet) {
+      margin-top: 20px;
+    }
+    @include mq(small_laptop) {
+      //padding-left: 20px;
+    }
+  }
+}

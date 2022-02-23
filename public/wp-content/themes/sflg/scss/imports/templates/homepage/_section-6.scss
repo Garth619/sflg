@@ -1,0 +1,265 @@
+#section-six {
+  padding-top: 32px;
+  overflow: hidden;
+  @include mq(small_monitor) {
+    padding-top: 132px;
+    overflow: unset;
+  }
+  @media screen and (min-width: 2300px) {
+    max-width: 1920px;
+    @include margin_lr();
+  }
+}
+
+#sec-six-title {
+  display: block;
+  padding: 0 50px;
+  margin-bottom: 60px;
+  @include type(
+    (
+      size: 40px,
+      height: 45px,
+      family: $primaryfont,
+      weight: 500,
+      align: center,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 53px;
+  }
+  @include mq(small_laptop) {
+    padding-top: 85px;
+    margin-bottom: 98px;
+  }
+  @include mq(small_monitor) {
+    margin-bottom: 84px;
+  }
+  br {
+    @include mq(small_laptop) {
+      display: none;
+    }
+  }
+  span {
+    color: $orangedark;
+  }
+}
+
+#sec-six-inner {
+  position: relative;
+  @include mq(small_laptop) {
+    @include flex(flex-end);
+  }
+}
+
+#sec-six-img-wrapper {
+  position: relative;
+  @include mq(small_laptop) {
+    @include abs(0, null, null, 0, 1);
+  }
+}
+
+#sec-six-play-wrapper {
+  width: 100%;
+  @include abs(null, null, 16px, 25px, 1);
+  @include mq(small_tablet) {
+    left: 0;
+    width: 100%;
+    bottom: 135px;
+  }
+  @include mq(small_laptop) {
+    bottom: 64px;
+    left: 11px;
+  }
+  @include mq(large_laptop) {
+    bottom: 49px;
+    left: 60px;
+  }
+  @include mq(small_monitor) {
+    bottom: 69px;
+    left: 133px;
+  }
+  #sec-six-play-inner {
+    position: relative;
+    max-width: 665px;
+    @include margin_lr();
+    @include mq(small_tablet) {
+      max-width: 580px;
+      padding: 0 34px;
+      @include flex(null, center);
+    }
+    @include mq(small_laptop) {
+      padding: 0;
+      @include margin_lr(0);
+    }
+    .sec-six-play-button {
+      @include box(77px, 77px);
+      @include mq(small_tablet) {
+        @include box(125px, 125px);
+      }
+      @include mq(small_laptop) {
+        @include box(144px, 144px);
+      }
+      span {
+        &::before {
+          @include tri(right, 9px, 13px, $orangedark);
+          @include mq(large_laptop) {
+            @include tri(right, 9px, 16px, $orangedark);
+          }
+        }
+      }
+    }
+    &:hover {
+      .sec-six-play-button {
+        span {
+          &::before {
+            @include tri(right, 9px, 13px, $white);
+            @include mq(large_laptop) {
+              @include tri(right, 9px, 16px, $white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#sec-six-play-title {
+  display: block;
+  max-width: 155px;
+  margin-top: 7px;
+  @include type(
+    (
+      size: 17px,
+      height: 20px,
+      family: $secondaryfont,
+      color: $orangedark,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    line-height: 25px;
+    margin-left: 13px;
+  }
+}
+
+img#sec-six-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    width: 1200px;
+    max-width: none;
+  }
+  @include mq(small_laptop) {
+    width: calc(100% + 82px);
+    margin-left: -140px;
+  }
+  @media screen and (min-width: 1315px) {
+    margin-left: -96px;
+  }
+  @include mq(small_monitor) {
+    width: calc(100% + 13px);
+    margin-left: 0;
+  }
+}
+
+#sec-six-content-wrapper {
+  padding: 32px 25px 0;
+  text-align: center;
+  margin-bottom: 40px;
+  @include mq(small_tablet) {
+    margin-top: -116px;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+  }
+  @include mq(small_laptop) {
+    margin-top: 0px;
+    padding: 64px 35px 0;
+    margin-bottom: 63px;
+  }
+  @include mq(large_laptop) {
+    padding: 54px 50px 0;
+  }
+  @include mq(small_monitor) {
+    padding: 94px 170px 0 0;
+    margin-bottom: 117px;
+  }
+  .content {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 38px;
+    @include mq(small_tablet) {
+      font-size: 30px;
+      line-height: 45px;
+      margin-bottom: 50px;
+    }
+    @include mq(large_laptop) {
+      font-size: 40px;
+      line-height: 55px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#sec-six-content {
+  max-width: 615px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    max-width: 580px;
+  }
+  @include mq(small_laptop) {
+    @include margin_lr(0);
+  }
+  @include mq(large_laptop) {
+    max-width: 700px;
+  }
+  @include mq(small_monitor) {
+    max-width: 915px;
+  }
+}
+
+#sec-six-content-inner {
+  padding: 52px 20px;
+  @include mq(small_tablet) {
+    padding: 64px;
+  }
+  @include mq(small_monitor) {
+    padding: 76px;
+  }
+}
+
+#six-info-title {
+  display: block;
+  margin-bottom: 27px;
+  @include type(
+    (
+      size: 24px,
+      height: 30px,
+      family: $secondaryfont,
+      color: $orangedark,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    margin-bottom: 44px;
+  }
+}
+
+.sec-six-button {
+  //padding: 9px 15px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    @include margin_lr(0);
+  }
+  @include mq(large_laptop) {
+    margin-top: -22px;
+    padding: 13px 19px;
+  }
+}

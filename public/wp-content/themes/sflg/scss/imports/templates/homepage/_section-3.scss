@@ -1,0 +1,137 @@
+#section-three {
+  padding: 85px 30px;
+  position: relative;
+  z-index: 2;
+  @include mq(small_tablet) {
+    padding: 55px 45px 0px;
+  }
+  @include mq(small_laptop) {
+    padding: 84px 45px 0;
+  }
+  @include mq(large_laptop) {
+    padding: 76px 45px 0;
+  }
+  @include mq(small_monitor) {
+    padding: 104px 45px 0;
+  }
+  .awards-component {
+    padding-left: 0;
+    padding-right: 0;
+    @include mq(small_tablet) {
+      margin-top: 74px;
+      padding: 44px 35px 86px;
+    }
+    @include mq(small_laptop) {
+      margin-top: 0px;
+    }
+    @include mq(large_laptop) {
+      padding: 44px 70px 86px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 32px;
+      max-width: 1565px;
+    }
+  }
+}
+
+#sec-three-inner {
+}
+
+#sec-three-title {
+  display: block;
+  max-width: 485px;
+  @include margin_lr();
+  @include type(
+    (
+      size: 50px,
+      height: 55px,
+      family: $primaryfont,
+      weight: 500,
+      align: center,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 75px;
+    line-height: 80px;
+    max-width: 620px;
+    //margin-bottom: 45px;
+    @include margin_lr();
+  }
+  @include mq(small_laptop) {
+    font-size: 90px;
+    line-height: 95px;
+    max-width: 900px;
+  }
+  @include mq(small_monitor) {
+    font-size: 110px;
+    line-height: 110px;
+    max-width: 1090px;
+  }
+  br {
+    display: none;
+    @include mq(small_laptop) {
+      display: inline-block;
+    }
+  }
+}
+
+#section-three {
+  .double-line {
+    max-width: 805px;
+    margin-top: 16px;
+    @include margin_lr();
+    @include mq(small_tablet) {
+      margin-top: 44px;
+      margin-bottom: 44px;
+    }
+    @include mq(small_laptop) {
+      margin-bottom: 80px;
+    }
+    @include mq(large_laptop) {
+      margin-top: 28px;
+      margin-bottom: 65px;
+    }
+    @include mq(small_monitor) {
+      max-width: 890px;
+      margin-top: 43px;
+      margin-bottom: 85px;
+    }
+    &::before {
+      margin-left: 40px;
+    }
+    &::after {
+      margin-left: 0px;
+    }
+  }
+}
+
+#sec-three-content {
+  @include mq(small_tablet) {
+    padding: 0 35px;
+  }
+  @include mq(small_laptop) {
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    padding: 0 85px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1590px;
+    @include margin_lr();
+  }
+}
+
+.sec-three-col {
+  flex-basis: calc(50% - 30px);
+  @include mq(small_monitor) {
+    flex-basis: calc(50% - 60px);
+  }
+}
+
+.sec-three-button {
+  margin-bottom: 40px;
+  padding: 9px 8px;
+  @include mq(small_tablet) {
+    padding: 9px 33px;
+  }
+}

@@ -1,0 +1,152 @@
+.awards-component {
+  margin-top: 21px;
+  padding: 20px 25px 60px;
+  @include mq(small_tablet) {
+    padding: 44px 0px 46px;
+    margin-top: 34px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 21px;
+    max-width: 1205px;
+    @include margin_lr();
+  }
+  @include mq(large_laptop) {
+    margin-top: 99px;
+    max-width: 1275px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 50px;
+    max-width: 1675px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+  }
+}
+
+body.page-template-template-debraschoenberg {
+  .awards-component {
+    max-width: none;
+    @include mq(small_monitor) {
+      position: relative;
+      left: -120px;
+      width: calc(100% + 199px);
+    }
+  }
+}
+
+#pa-awards-wrapper {
+  .awards-component {
+    @include mq(small_laptop) {
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.awards-title {
+  display: block;
+  margin-bottom: 22px;
+  @include type(
+    (
+      size: 30px,
+      height: 30px,
+      family: $primaryfont,
+      color: $orangedark,
+      weight: 500,
+      align: center,
+    )
+  );
+}
+
+.awards-content {
+  text-align: center;
+  max-width: 525px;
+  @include margin_lr();
+}
+
+.awards-button {
+  @include margin_lr();
+  padding: 15px 23px;
+}
+
+.awards-slider-wrapper {
+  margin-top: 37px;
+  max-width: 400px;
+  @include margin_lr();
+  @include flex(space-between, null, null, wrap);
+  @include mq(small_tablet) {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 44px;
+    max-width: 680px;
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+    margin-top: 73px;
+  }
+}
+
+.awards-arrow {
+  background: $purpledark;
+  width: calc(50% - 1px);
+  padding: 11px 0;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  @include flex(center, center);
+  @include mq(small_tablet) {
+    @include box(52px, 60px);
+  }
+  &:hover {
+    background: $purplelight;
+  }
+  img {
+    @include box(15px, 30px);
+  }
+}
+
+.awards-arrow-left {
+  order: 2;
+  @include mq(small_tablet) {
+    order: 1;
+  }
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+.awards-arrow-right {
+  order: 3;
+}
+
+.awards-slider {
+  width: 100%;
+  order: 1;
+  margin-bottom: 30px;
+  height: 140px;
+  overflow: hidden;
+  @include mq(small_tablet) {
+    order: 2;
+    margin-bottom: 0px;
+    width: calc(100% - 144px);
+  }
+}
+
+.awards-single-slide {
+  height: 140px;
+  .awards-single-slide-inner {
+    height: 100%;
+    @include flex(center, center);
+    img,
+    svg {
+      max-height: 120px;
+      @include image();
+      &.fastgrowing,
+      &.lgbtqownedbusinesses,
+      &.topwomenowned,
+      &.topcorporatephilanthropists,
+      &.sanfranciscobusinesstimes {
+        width: 200px;
+      }
+    }
+  }
+}

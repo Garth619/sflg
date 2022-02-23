@@ -1,0 +1,161 @@
+#banner-title.banner-title-blog {
+  padding: 25px 0 0px;
+  font-size: 45px;
+  @include mq(small_laptop) {
+    padding-top: 0;
+  }
+  @include mq(large_laptop) {
+    font-size: 50px;
+  }
+  @include mq(small_monitor) {
+    font-size: 55px;
+  }
+}
+
+#blog-feed {
+  padding-top: 20px;
+  @include mq(small_laptop) {
+    padding-top: 0px;
+  }
+}
+
+.blog-post {
+  border-bottom: 1px solid $purpledark;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  h2.post-header {
+    a {
+      color: $orangedark;
+      text-decoration: none;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: $purpledark;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.post-meta {
+  margin-bottom: 25px;
+  @include type(
+    (
+      size: 18px,
+      height: 22px,
+      family: $secondaryfont,
+    )
+  );
+  span {
+    display: inline;
+  }
+  ul {
+    list-style: none;
+    display: inline;
+    li {
+      display: inline;
+      &:last-of-type {
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+      a {
+        color: $purpledark;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &::after {
+          @include contentdisplay(inline-block, ", ");
+        }
+        &:hover {
+          color: $orangedark;
+        }
+      }
+    }
+  }
+}
+
+.blog-button {
+  margin-top: 30px;
+  padding: 14px 23px;
+}
+
+#paged-wrapper {
+  margin-top: 30px;
+  @include mq(small_laptop) {
+    padding-bottom: 59px;
+  }
+  @include mq(large_laptop) {
+    padding-bottom: 85px;
+  }
+  ul {
+    list-style: none;
+    position: relative;
+    @include flex(center);
+    li {
+      margin: 0 6px;
+      cursor: pointer;
+      @include type(
+        (
+          size: 15px,
+          height: 18px,
+          family: $secondaryfont,
+          weight: 500,
+          transform: uppercase,
+        )
+      );
+      &.mynext,
+      &.myprev {
+        @include flex(null, center);
+        @include abs(0, null, null, null);
+        svg {
+          @include box(9px, 17px);
+          path {
+            fill: $purpledark;
+            transition: all 200ms ease-in-out;
+          }
+        }
+        &:hover {
+          svg {
+            @include box(9px, 17px);
+            path {
+              fill: $orangedark;
+            }
+          }
+          a {
+            color: $orangedark;
+          }
+        }
+      }
+      &.mynext {
+        right: 0;
+        svg {
+          margin-left: 20px;
+        }
+      }
+      &.myprev {
+        left: 0;
+        svg {
+          transform: rotate(180deg);
+          margin-right: 20px;
+        }
+      }
+      &.active {
+        a {
+          color: $orangedark;
+        }
+      }
+      a {
+        color: $purpledark;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $orangedark;
+        }
+      }
+    }
+  }
+}

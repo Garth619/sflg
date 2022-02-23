@@ -1,0 +1,41 @@
+// vars/mixins
+
+@import "imports/global/fonts", "imports/global/colors",
+  "imports/global/mediaqueries", "imports/utils/mixins_do_not_edit";
+
+// third party files
+
+@import "imports/vendors/slick", "imports/vendors/lity";
+
+// reset
+
+@import "imports/base/reset";
+
+// global
+
+@import "imports/global/global";
+
+// components
+
+@import "imports/components/buttons", "imports/components/infoslider-component",
+  "imports/components/awards-components", "imports/components/video",
+  "imports/components/internal-content-forms";
+
+// layout
+
+@import "imports/layout/header", "imports/layout/navigation",
+  "imports/layout/banner", "imports/layout/sidebar", "imports/layout/footer";
+
+// page templates
+
+@import "imports/templates/homepage/section-1",
+  "imports/templates/homepage/section-2", "imports/templates/homepage/section-3",
+  "imports/templates/homepage/section-4", "imports/templates/homepage/section-5",
+  "imports/templates/homepage/section-6", "imports/templates/homepage/section-7",
+  "imports/templates/homepage/section-8", "imports/templates/about",
+  "imports/templates/padirectory", "imports/templates/blog",
+  "imports/templates/testimonials", "imports/templates/attprofile",
+  "imports/templates/contact", "imports/templates/meetteam",
+  "imports/templates/awards", "imports/templates/not-found";
+
+@import "imports/layout/animations";

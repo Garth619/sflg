@@ -1,0 +1,85 @@
+#testimonials-wrapper {
+  margin-top: 40px;
+  max-width: 600px;
+  @include margin_lr();
+  @media screen and (min-width: 950px) {
+    max-width: 100%;
+    column-count: 2;
+    column-gap: 40px;
+  }
+  @include mq(large_laptop) {
+    padding: 0;
+    column-gap: 67px;
+    margin-top: -40px;
+  }
+}
+
+.single-testi {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include mq(small_tablet) {
+    display: inline-block;
+    width: 100%;
+  }
+  @include mq(large_laptop) {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  &.info-box {
+    box-shadow: 0px 3px 28px #cdcfd1;
+  }
+  span {
+    display: block;
+  }
+}
+
+.single-testi-inner {
+  padding: 40px 23px;
+  @include mq(small_tablet) {
+    padding: 40px 30px;
+  }
+  @include mq(small_laptop) {
+    padding: 53px 30px;
+  }
+  img.star {
+    @include image();
+    @include margin_lr();
+  }
+}
+
+.single-testi-title {
+  margin-top: 20px;
+  @include type(
+    (
+      size: 25px,
+      height: 35px,
+      family: $primaryfont,
+      color: $purpledark,
+      weight: 500,
+      align: center,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 32px;
+  }
+}
+
+.single-testi-content {
+  margin-top: 25px;
+}
+
+.single-testi-name {
+  @include type(
+    (
+      size: 17px,
+      family: $secondaryfont,
+      color: $purpledark,
+      weight: 500,
+      transform: uppercase,
+    )
+  );
+}

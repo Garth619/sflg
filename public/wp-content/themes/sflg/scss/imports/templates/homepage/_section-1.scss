@@ -1,0 +1,140 @@
+#section-one {
+  position: relative;
+  margin-top: 156px;
+  overflow: hidden;
+  @include mq(small_tablet) {
+    margin-top: 101px;
+  }
+}
+
+#sec-one-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px 18px 180px;
+  @include mq(small_tablet) {
+    padding: 44px 18px 214px;
+  }
+  @include mq(small_laptop) {
+    padding: 44px 18px 163px;
+  }
+  @include mq(large_laptop) {
+    padding: 68px 18px 243px;
+  }
+  @include mq(small_monitor) {
+    padding: 68px 18px 328px;
+  }
+  img#bridge {
+    @include image();
+    @include margin_lr();
+    width: 125px;
+    @include mq(small_laptop) {
+      width: 145px;
+    }
+  }
+}
+
+span#sec-one-title {
+  display: block;
+  margin-top: 23px;
+  margin-bottom: 29px;
+  max-width: 325px;
+  text-shadow: 0px 1px 80px #000000;
+  @include margin_lr();
+  @include type(
+    (
+      size: 60px,
+      height: 55px,
+      spacing: 0,
+      weight: 500,
+      family: $primaryfont,
+      color: #fff,
+      align: center,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 70px;
+    line-height: 70px;
+    max-width: 695px;
+    margin-bottom: 35px;
+  }
+  @include mq(small_laptop) {
+    font-size: 90px;
+    line-height: 90px;
+    margin-top: 31px;
+    max-width: 925px;
+    margin-bottom: 16px;
+  }
+  @include mq(large_laptop) {
+    font-size: 110px;
+    line-height: 110px;
+    margin-top: 51px;
+    max-width: 1085px;
+    margin-bottom: 41px;
+  }
+}
+
+.sec-one-button {
+  width: 273px;
+  height: 77px;
+  font-size: 20px;
+  line-height: 20px;
+  @include mq(small_laptop) {
+    font-size: 23px;
+    width: 315px;
+    height: 84px;
+  }
+  @include mq(large_laptop) {
+    font-size: 25px;
+    height: 88px;
+  }
+  @include mq(small_monitor) {
+    height: 92px;
+  }
+  span {
+    padding: 14px 40px 0px;
+    @include mq(small_laptop) {
+      padding: 18px 40px 0px;
+    }
+    @include mq(large_laptop) {
+      padding: 20px 40px 16px;
+    }
+    @include mq(small_monitor) {
+      padding: 22px 40px 16px;
+    }
+  }
+}
+
+img#hero-image {
+  object-fit: cover;
+  object-position: -195px 0px;
+  @include box(100%, 100%);
+  @include abs(0, null, null, 0);
+  @media screen and (min-width: 590px) {
+    object-position: 0px 0px;
+  }
+}
+
+#hero-wave {
+  position: absolute;
+  z-index: 1;
+  bottom: -1px;
+  left: -800px;
+  display: block;
+  width: 1920px;
+  @include mq(small_tablet) {
+    left: -380px;
+    width: 1370px;
+  }
+  @media screen and (min-width: 985px) {
+    width: 1570px;
+  }
+  @include mq(small_laptop) {
+    width: 135%;
+    //left: -290px;
+  }
+  @include mq(large_laptop) {
+    width: 100%;
+    left: 0;
+  }
+}

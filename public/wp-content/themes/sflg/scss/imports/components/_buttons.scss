@@ -1,0 +1,49 @@
+.button-one {
+  position: relative;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  display: block;
+  transition: background 200ms ease-in-out;
+  padding: 12px;
+  @include margin_lr();
+  @include type(
+    (
+      family: $secondaryfont,
+      color: #fff,
+      align: center,
+    )
+  );
+  &:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  span {
+    background: $oranegradient;
+    position: relative;
+    border-radius: 50px;
+    display: block;
+    @include box(100%, 100%);
+  }
+}
+
+.button-two {
+  display: block;
+  max-width: max-content;
+  border: 1px solid $purpledark;
+  padding: 9px 18px;
+  border-radius: 50px;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 17px,
+      family: $secondaryfont,
+      color: $purpledark,
+      weight: 500,
+      align: center,
+    )
+  );
+  &:hover {
+    background: $purpledark;
+    color: #fff;
+  }
+}

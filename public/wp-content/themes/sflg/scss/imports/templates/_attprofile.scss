@@ -1,0 +1,221 @@
+#att-spacer {
+  @include mq(small_laptop) {
+    flex-shrink: 0;
+    flex-basis: 430px;
+    order: 1;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 504px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 544px;
+  }
+}
+
+#att-img {
+  max-width: 430px;
+  padding: 38px;
+  border: 1px solid $orangelight;
+  position: relative;
+  @include margin_lr();
+  @include mq(small_laptop) {
+    padding: 40px;
+  }
+  @include mq(large_laptop) {
+    max-width: 504px;
+  }
+  &::after {
+    background: $white;
+    box-shadow: 0px 3px 6px #00000029;
+    @include abs(15px, null, null, 15px);
+    @include contentdisplay();
+    @include box(calc(100% - 30px), calc(100% - 30px));
+    @include mq(small_laptop) {
+      @include abs(18px, null, null, 18px);
+      @include box(calc(100% - 36px), calc(100% - 36px));
+    }
+  }
+  #att-img-inner {
+    overflow: hidden;
+  }
+  img {
+    position: relative;
+    z-index: 1;
+    @include image();
+    width: 100%;
+  }
+}
+
+.att-placeholder-wrapper {
+  background: #fff;
+  @include box(100%, 100%);
+  @include flex(center, center);
+  @include abs(0, null, null, 0, 1);
+  span.att-placeholder-title {
+    @include type(
+      (
+        size: 20px,
+        family: $secondaryfont,
+        color: $orangedark,
+        weight: 500,
+      )
+    );
+    @include mq(small_laptop) {
+      font-size: 30px;
+    }
+  }
+}
+
+#debra-img {
+  max-width: 430px;
+  position: relative;
+  box-shadow: 0px 3px 6px #00000029;
+  @include margin_lr();
+  &.has-video {
+    cursor: pointer;
+    &:hover {
+      #debra-img-inner {
+        img {
+          transform: scale(1.05);
+        }
+      }
+      #debra-play {
+        background: $purpledark;
+      }
+    }
+  }
+  @include mq(small_laptop) {
+    float: left;
+    margin-top: -169px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
+  @include mq(large_laptop) {
+    max-width: 504px;
+  }
+  @include mq(small_monitor) {
+    margin-right: 82px;
+    margin-bottom: 38px;
+    margin-top: -214px;
+  }
+}
+
+#debra-img-inner {
+  overflow: hidden;
+  position: relative;
+  img {
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+    transition: all 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include image();
+    //aspect-ratio: attr(600px) / attr(717px);
+  }
+}
+
+#debra-title-wrapper {
+  padding: 10px 15px;
+  position: relative;
+  background: #fff;
+  z-index: 1;
+  margin-top: -48px;
+  @include flex(space-between, center);
+  @include mq(small_tablet) {
+    margin-top: -56px;
+  }
+}
+
+#debra-title {
+  display: block;
+  @include type(
+    (
+      size: 18px,
+      family: $secondaryfont,
+      color: $purpledark,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 20px;
+  }
+}
+
+#debra-play {
+  border-radius: 50%;
+  background: $orangelight;
+  display: block;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  @include box(28px, 28px);
+  @include mq(small_tablet) {
+    @include box(36px, 36px);
+  }
+  &::after {
+    margin: auto;
+    @include abs(0, 0, 0, 2px);
+    @include contentdisplay();
+    @include tri(right, 5px, 6px, $white);
+  }
+}
+
+#page-container.att-content {
+  margin-top: 228px;
+  padding-top: 0;
+  @include mq(small_tablet) {
+    margin-top: 405px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 0px;
+    order: 2;
+  }
+  @include mq(small_monitor) {
+    max-width: 1690px;
+  }
+  #page-content {
+    @include mq(small_laptop) {
+      order: 2;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include mq(small_monitor) {
+      padding-left: 82px;
+    }
+  }
+}
+
+#page-container.debra-content {
+  margin-top: -158px;
+  padding-top: 0;
+
+  @include mq(small_tablet) {
+    margin-top: -90px;
+  }
+  @include mq(large_laptop) {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1690px;
+  }
+  #page-content {
+    margin-top: 35px;
+    @include mq(small_laptop) {
+      width: 100%;
+      padding-right: 0px;
+      padding-top: 1px;
+    }
+    #page-content-inner {
+      margin-top: 54px;
+      @include mq(small_tablet) {
+        margin-top: 39px;
+      }
+      @include mq(small_laptop) {
+        margin-top: 49px;
+      }
+      @include mq(small_monitor) {
+        padding: 0 80px 0 119px;
+      }
+    }
+  }
+}

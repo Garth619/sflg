@@ -1,0 +1,88 @@
+#section-eight {
+  padding: 80px 30px 18px;
+  @include mq(small_tablet) {
+    padding: 165px 80px 18px;
+  }
+  @include mq(small_laptop) {
+    padding: 53px 80px 66px;
+  }
+  @include mq(large_laptop) {
+    padding: 149px 128px 48px;
+  }
+  @include mq(small_monitor) {
+    padding: 235px 128px 88px;
+  }
+}
+
+#sec-eight-inner {
+  @include mq(small_laptop) {
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    max-width: 1220px;
+
+    @include margin_lr();
+  }
+  @include mq(small_monitor) {
+    max-width: 1280px;
+  }
+}
+
+#sec-eight-content {
+}
+
+#sec-eight-title {
+  margin-bottom: 25px;
+  display: block;
+  @include type(
+    (
+      size: 40px,
+      height: 45px,
+      family: $primaryfont,
+      weight: 500,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  @include mq(small_monitor) {
+    font-size: 50px;
+    line-height: 55px;
+  }
+}
+
+.sec-eight-button {
+  margin-top: 35px;
+}
+
+#sec-eight-image {
+  margin-top: 25px;
+  @include mq(small_laptop) {
+    margin-left: 30px;
+    flex-shrink: 0;
+    margin-top: -7px;
+  }
+  @include mq(large_laptop) {
+    margin-left: 80px;
+    margin-top: -16px;
+  }
+  @include mq(small_monitor) {
+    margin-right: -78px;
+    margin-left: 140px;
+  }
+  img {
+    @include image();
+    //max-width: 460px;
+    max-width: 100%;
+    @include margin_lr();
+    @include mq(small_tablet) {
+      //max-width: 520px;
+      width: 510px;
+    }
+    @include mq(small_monitor) {
+      //max-width: 620px;
+      width: 620px;
+    }
+  }
+}

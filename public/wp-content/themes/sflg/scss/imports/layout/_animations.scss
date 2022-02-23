@@ -1,0 +1,314 @@
+@media screen and (min-width: 1199px) {
+  // vars and mixins
+
+  $transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
+    opacity 500ms linear;
+  $transition_two: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+
+  @mixin img_scale($scale) {
+    transform: scale($scale, $scale);
+    transition: $transition;
+  }
+
+  @mixin transform_opacity($transform: 0px) {
+    transform: translateY($transform);
+    opacity: 0;
+    transition: $transition;
+  }
+
+  @mixin fire_transform_opacity($delay) {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-delay: $delay, $delay;
+  }
+
+  @mixin line_animation($direction) {
+    transform: scale(0, 1);
+    transform-origin: top $direction;
+    transition: $transition_two;
+  }
+
+  @mixin fire_return_scale($scale, $delay: 0ms) {
+    transform: scale($scale, $scale);
+    transition-delay: $delay, $delay;
+  }
+  #bridge {
+    @include transform_opacity(-20px);
+  }
+  #sec-one-title {
+    @include transform_opacity(-20px);
+  }
+  .sec-one-button {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
+      opacity 500ms linear, background 200ms ease-in-out;
+  }
+  img#hero-image {
+    @include img_scale(1.1);
+  }
+  body.ready {
+    #bridge {
+      @include fire_transform_opacity(300ms);
+    }
+    #sec-one-title {
+      @include fire_transform_opacity(500ms);
+    }
+    .sec-one-button {
+      transform: translateY(0px);
+      opacity: 1;
+      transition-delay: 700ms, 700ms, 0ms;
+    }
+    img#hero-image {
+      @include fire_return_scale(1);
+    }
+  }
+  // section three
+  #section-three {
+    .double-line {
+      &::before,
+      &::after {
+        opacity: 0;
+        transition: $transition;
+      }
+      &::before {
+        transform: translateX(40px);
+      }
+      &::after {
+        transform: translateX(-40px);
+      }
+    }
+  }
+  #section-three.visible {
+    .double-line {
+      &::before,
+      &::after {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+  }
+  // section four
+  #section-four {
+    #sec-four-bg {
+      @include img_scale(1.1);
+    }
+  }
+  .sec-four-single-slide {
+    transition: all 600ms ease-in-out;
+    border-right: 1px solid rgba(255, 255, 255, 0);
+  }
+  .sec-four-single-slide-inner {
+    @include transform_opacity(-30px);
+  }
+  #section-four.visible {
+    #sec-four-bg {
+      @include fire_return_scale(1);
+    }
+    .sec-four-single-slide {
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .sec-four-single-slide-inner {
+      @include fire_transform_opacity(100ms);
+    }
+  }
+  // section five
+  #section-five {
+    .double-line {
+      &::before,
+      &::after {
+        opacity: 0;
+        transition: $transition;
+      }
+      &::before {
+        transform: translateX(40px);
+      }
+      &::after {
+        transform: translateX(-40px);
+      }
+    }
+  }
+
+  #section-five.visible {
+    .double-line {
+      &::before,
+      &::after {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+  }
+  #sec-five-sidebar-img {
+    transform: translateY(130px);
+    transition: all 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #sec-five-sp-wrapper {
+    transform: translateY(-80px);
+    transition: all 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #section-five.visible {
+    #sec-five-sidebar-img,
+    #sec-five-sp-wrapper {
+      transform: translateY(0px);
+    }
+  }
+
+  #sec-five-info-box {
+    img {
+      transform: scale(0.9);
+      transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    }
+  }
+
+  #sec-five-info-box.visible {
+    img {
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  // section six
+  #sec-six-title {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 1700ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
+      opacity 500ms linear;
+  }
+  #sec-six-content {
+    transform: translateY(100px);
+    transition: all 1500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #section-six.visible {
+    #sec-six-title,
+    #sec-six-content {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  // section eight
+  #sec-eight-image {
+    @include img_scale(0.9);
+    //@include transform_opacity(-90px);
+  }
+  #section-eight.visible {
+    #sec-eight-image {
+      @include fire_return_scale(1);
+      //@include fire_transform_opacity(0ms);
+    }
+  }
+  // awards component
+  // .awards-slider {
+  //   @include transform_opacity(-20px);
+  // }
+  // .awards-arrow-left,
+  // .awards-arrow-right {
+  //   transition: $transition;
+  //   opacity: 0;
+  // }
+  // .awards-arrow-left {
+  //   transform: translateX(-25px);
+  // }
+  // .awards-arrow-right {
+  //   transform: translateX(25px);
+  // }
+  // #awards-component.visible {
+  //   .awards-slider {
+  //   @include fire_transform_opacity(0ms);
+  //   }
+  //   .awards-arrow-left,
+  //   .awards-arrow-right {
+  //     opacity: 1;
+  //     transition-delay: 500ms;
+  //     transform: translateX(0px);
+  //   }
+  // }
+  // internal banners
+  #banner-image {
+    @include img_scale(1.15);
+  }
+  .banner-button {
+    @include transform_opacity(-15px);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
+      opacity 500ms linear, background 200ms ease-in-out;
+  }
+  body.ready {
+    #banner-image {
+      @include img_scale(1);
+    }
+    .banner-button {
+      @include fire_transform_opacity(0ms);
+    }
+  }
+  // about page
+  #about-top-image {
+    img {
+      @include img_scale(1.15);
+    }
+  }
+  body.ready {
+    #about-top-image {
+      img {
+        @include img_scale(1);
+      }
+    }
+  }
+  #about-bottom-sidebar {
+    img {
+      transform: translateY(130px);
+      transition: all 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    }
+    #about-info-box {
+      transform: translateY(-100px);
+      transition: all 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    }
+  }
+  #about-bottom.visible {
+    #about-bottom-sidebar {
+      img {
+        transform: translateY(0px);
+      }
+      #about-info-box {
+        transform: translateY(0px);
+      }
+    }
+  }
+  // att profile
+  #banner-content {
+    .double-line {
+      &::before,
+      &::after {
+        opacity: 0;
+        transition: $transition;
+      }
+      &::before {
+        transform: translateX(40px);
+      }
+      &::after {
+        transform: translateX(-40px);
+      }
+    }
+  }
+  #debra-img-inner,
+  #att-img {
+    img {
+      transform: scale(1.1);
+      transition: $transition;
+    }
+  }
+  body.ready {
+    #banner-content {
+      .double-line {
+        &::before,
+        &::after {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+    }
+    #debra-img-inner,
+    #att-img {
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+}
