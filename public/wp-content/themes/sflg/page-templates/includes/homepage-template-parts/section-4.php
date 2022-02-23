@@ -38,19 +38,19 @@
   <picture>
     <?php $section_four_background_desktop = get_field('section_four_background_desktop');?>
     <?php if ($section_four_background_desktop) {?>
-    <source media='(min-width: 1650px)' data-srcset='<?php echo $section_four_background_desktop['url']; ?>'>
+    <source media='(min-width: 1650px)' srcset='<?php echo $section_four_background_desktop['url']; ?>'>
     <?php }?>
     <?php $section_four_background_large_laptop = get_field('section_four_background_large_laptop');?>
     <?php if ($section_four_background_large_laptop) {?>
-    <source media='(min-width: 1380px)' data-srcset='<?php echo $section_four_background_large_laptop['url']; ?>'>
+    <source media='(min-width: 1380px)' srcset='<?php echo $section_four_background_large_laptop['url']; ?>'>
     <?php }?>
     <?php $section_four_background_small_laptop = get_field('section_four_background_small_laptop');?>
     <?php if ($section_four_background_small_laptop) {?>
-    <source media='(min-width: 1170px)' data-srcset='<?php echo $section_four_background_small_laptop['url']; ?>'>
+    <source media='(min-width: 1170px)' srcset='<?php echo $section_four_background_small_laptop['url']; ?>'>
     <?php }?>
     <?php $section_four_background_tablet = get_field('section_four_background_tablet');?>
     <?php if ($section_four_background_tablet) {?>
-    <source media='(min-width: 768px)' data-srcset='<?php echo $section_four_background_tablet['url']; ?>'>
+    <source media='(min-width: 768px)' srcset='<?php echo $section_four_background_tablet['url']; ?>'>
     <?php }?>
     <?php $section_four_background_mobile = get_field('section_four_background_mobile');?>
     <?php if ($section_four_background_mobile) {?>

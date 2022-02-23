@@ -35,15 +35,13 @@ jQuery(document).ready(function ($) {
    * https://web.dev/browser-level-image-lazy-loading/
    */
   if ("loading" in HTMLImageElement.prototype) {
+    //console.log("loading in use");
     const images = document.querySelectorAll('img[loading="lazy"]');
-    const pictures = document.querySelectorAll("source[data-sourceset]"); // left off here
     images.forEach((img) => {
       img.src = img.dataset.src;
     });
-    pictures.forEach((picture) => {
-      // source.sourceset = source.dataset.sourceset;
-    });
   } else {
+    //console.log("loading NOT in use");
     const script = document.createElement("script");
     script.src =
       "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js";
