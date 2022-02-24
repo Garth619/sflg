@@ -46,4 +46,14 @@
     background: $purpledark;
     color: #fff;
   }
+  &.button-white {
+    border: 1px solid $white;
+    color: $white;
+    background: transparent;
+    @include margin_lr();
+    &:hover {
+      background: $white;
+      color: $purplelight;
+    }
+  }
 }

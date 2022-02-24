@@ -96,7 +96,7 @@
   }
   .sec-four-single-slide {
     transition: all 600ms ease-in-out;
-    border-right: 1px solid rgba(255, 255, 255, 0);
+    // border-right: 1px solid rgba(255, 255, 255, 0);
   }
   .sec-four-single-slide-inner {
     @include transform_opacity(-30px);
@@ -106,7 +106,7 @@
       @include fire_return_scale(1);
     }
     .sec-four-single-slide {
-      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      //border-right: 1px solid rgba(255, 255, 255, 0.3);
     }
     .sec-four-single-slide-inner {
       @include fire_transform_opacity(100ms);

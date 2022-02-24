@@ -9,22 +9,33 @@
       <div class='sec-four-single-slide'>
         <a href='<?php the_sub_field('link_new');?>'>
           <div class='sec-four-single-slide-inner'>
-            <?php $icon = get_sub_field('icon');?>
-            <?php if ($icon) {?>
-            <img class='lazyload' data-src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" width='71'
-              height='71' loading='lazy' />
-            <?php }?>
-            <div class='sec-four-single-slide-title-wrapper'>
-              <span class='sec-four-single-slide-title'><?php the_sub_field('title');?></span>
-              <!-- sec-four-single-slide-title -->
-            </div><!-- sec-four-single-slide-title-wrapper -->
-            <div class='dots-wrapper'>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div><!-- dots-wrapper -->
-          </div><!-- sec-four-single-slide-inner -->
-        </a><!-- class -->
+            <div class='sec-four-single-slide-reg'>
+              <?php $icon = get_sub_field('icon');?>
+              <?php if ($icon) {?>
+              <img class='lazyload' data-src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" width='71'
+                height='71' loading='lazy' />
+              <?php }?>
+              <div class='sec-four-single-slide-title-wrapper'>
+                <span class='sec-four-single-slide-title'><?php the_sub_field('title');?></span>
+                <!-- sec-four-single-slide-title -->
+              </div><!-- sec-four-single-slide-title-wrapper -->
+              <div class='dots-wrapper'>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div><!-- dots-wrapper -->
+            </div><!-- sec-four-single-slide-inner -->
+          </div><!-- sec-four-single-slide-reg -->
+          <div class='sec-four-single-slide-hover'>
+            <div class='sec-four-single-hover-content'>
+              <span class='sec-four-single-slide-description'><?php the_sub_field('hover_description');?></span>
+              <!-- sec-four-single-slide-description -->
+              <span
+                class='button-two button-white sec-four-single-slide-button'><?php the_sub_field('hover_button_verbiage');?></span>
+              <!-- button-two white -->
+            </div><!-- sec-four-single-hover-content -->
+          </div><!-- sec-four-single-slide-hover -->
+        </a>
       </div><!-- sec-four-single-slide -->
       <?php endwhile;?>
       <?php endif;?>
