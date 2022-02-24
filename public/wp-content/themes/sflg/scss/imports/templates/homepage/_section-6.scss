@@ -103,9 +103,12 @@
       }
       span {
         &::before {
-          @include tri(right, 9px, 13px, $orangedark);
+          @include tri(right, 6px, 9px, $orangedark);
+          @include mq(small_tablet) {
+            @include tri(right, 9px, 13px, $orangedark);
+          }
           @include mq(large_laptop) {
-            @include tri(right, 9px, 16px, $orangedark);
+            @include tri(right, 11px, 15px, $orangedark);
           }
         }
       }
@@ -114,9 +117,12 @@
       .sec-six-play-button {
         span {
           &::before {
-            @include tri(right, 9px, 13px, $white);
+            @include tri(right, 6px, 9px, $white);
+            @include mq(small_tablet) {
+              @include tri(right, 9px, 13px, $white);
+            }
             @include mq(large_laptop) {
-              @include tri(right, 9px, 16px, $white);
+              @include tri(right, 11px, 15px, $white);
             }
           }
         }
@@ -129,6 +135,7 @@
   display: block;
   max-width: 155px;
   margin-top: 7px;
+  text-shadow: 0px 1px 10px #000;
   @include type(
     (
       size: 17px,

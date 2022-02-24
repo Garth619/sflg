@@ -84,6 +84,10 @@ function wpdocs_after_setup_theme()
 }
 add_action('after_setup_theme', 'wpdocs_after_setup_theme');
 
+add_theme_support('responsive-embeds');
+add_theme_support('wp-block-styles');
+add_theme_support('wp-block-styles');
+
 /**
  * Remove margin from admin bar
  */

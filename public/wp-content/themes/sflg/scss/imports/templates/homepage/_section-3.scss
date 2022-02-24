@@ -1,5 +1,5 @@
 #section-three {
-  padding: 85px 30px;
+  padding: 85px 25px;
   position: relative;
   z-index: 2;
   @include mq(small_tablet) {
@@ -130,7 +130,7 @@
 
 .sec-three-button {
   margin-bottom: 40px;
-  padding: 9px 8px;
+  padding: 9px 13px;
   @include mq(small_tablet) {
     padding: 9px 33px;
   }

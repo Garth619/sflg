@@ -130,14 +130,14 @@
     display: block;
   }
   img.stars {
-    width: 117px;
+    //width: 130px;
     @include image();
     @include margin_lr();
   }
   .infoslider-single-slide-inner {
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
@@ -301,14 +301,18 @@
 }
 
 .pa-slides-component {
-  //padding-top: 40px;
-  //padding-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   width: 100%;
   @include mq(small_laptop) {
   }
+  @include mq(large_laptop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   @include mq(small_monitor) {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .pa-slides {
     @include mq(small_monitor) {
@@ -373,21 +377,19 @@
 
 .att-slides-component {
   padding-bottom: 40px;
-  padding-top: 30px;
+  padding-top: 40px;
   @include mq(small_tablet) {
     max-width: 599px;
-    padding-bottom: 50px;
     @include margin_lr();
   }
   @include mq(small_laptop) {
     max-width: 933px;
-    padding-bottom: 7px;
+    padding-top: 0;
+    padding-bottom: 0px;
   }
   @include mq(large_laptop) {
-    padding-bottom: 25px;
   }
   @include mq(small_monitor) {
-    padding-top: 50px;
     max-width: none;
     margin-left: -52px;
     margin-right: 0;
@@ -466,7 +468,9 @@
 }
 
 .infoslider-slide-title {
-  display: block;
+  //display: block;
+  width: 100%;
+  flex-shrink: 0;
   @include type(
     (
       size: 25px,
@@ -480,13 +484,18 @@
 }
 
 .infoslider-slide-descrip {
-  font-size: 17px;
   display: block;
-  color: $black;
-  line-height: 27px;
   margin-top: 8px;
   width: calc(100% - 20px);
   max-width: 460px;
+  @include type(
+    (
+      size: 17px,
+      height: 27px,
+      family: $primaryfont,
+      color: $black,
+    )
+  );
   @include margin_lr();
   @include mq(small_tablet) {
     margin-top: 14px;

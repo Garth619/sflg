@@ -29,9 +29,10 @@
                   <span class='sec-five-single-sp-title'><?php the_sub_field('title');?></span>
                   <!-- sec-five-single-sp-title -->
                   <?php $icon = get_sub_field('icon');?>
-                  <img class='sec-five-single-sp-icon sec-five-single-sp-icon-<?php the_sub_field('icon_class');?>'
-                    class='lazyload' data-src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"
-                    heeight='61' loading='lazy' />
+                  <img
+                    class='sec-five-single-sp-icon sec-five-single-sp-icon-<?php the_sub_field('icon_class');?> lazyload'
+                    data-src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" heeight='61'
+                    loading='lazy' />
                   <div class='dots-wrapper'>
                     <span></span>
                     <span></span>

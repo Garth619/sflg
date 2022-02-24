@@ -42,13 +42,15 @@ body {
 }
 
 #page-container {
-  padding: 27px 25px 0;
+  padding: 21px 25px 0;
   position: relative;
   z-index: 1;
   top: -10px;
+  margin-top: 6px;
   background: #fff;
   @include mq(small_tablet) {
     padding: 27px 80px 0;
+    margin-top: 0px;
   }
   @include mq(small_laptop) {
     padding: 93px 80px 0;
@@ -84,6 +86,9 @@ body {
   }
   &.single-col {
     padding-top: 15px;
+    @include mq(small_tablet) {
+      padding-top: 35px;
+    }
     @include mq(small_laptop) {
       padding-top: 55px;
     }
@@ -315,7 +320,9 @@ img#test-alignment {
   }
 }
 
-/* table   */
+/* Gutenberg */
+
+/* table */
 .content table {
   border: 1px solid #f2f2f2;
   border-collapse: collapse;
@@ -354,6 +361,22 @@ img#test-alignment {
 .content table caption {
   padding: 0.5em;
 }
+
+/* text alignment */
+
+.has-text-align-left {
+  text-align: left;
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+/* image alignment */
 
 .wp-block-image {
   .alignleft {

@@ -73,7 +73,7 @@
 
 #banner-wave {
   width: 660px;
-  @include abs(null, null, 0, 0px);
+  @include abs(null, null, 0, -10px);
   @media screen and (min-width: 540px) {
     width: 960px;
   }

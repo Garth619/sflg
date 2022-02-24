@@ -157,7 +157,10 @@
 .single-video-title-wrapper {
   padding: 8px 25px 8px 10px;
   @include mq(small_tablet) {
-    padding: 14px 25px 14px 10px;
+    padding: 14px 25px 14px 15px;
+  }
+  @include mq(small_laptop) {
+    padding: 14px 25px 14px 19px;
   }
   span {
     transition: all 200ms ease-in-out;

@@ -14,9 +14,7 @@
 #about-top-content {
   @include mq(small_laptop) {
     order: 2;
-  }
-  @include mq(small_monitor) {
-    margin-top: 20px;
+    margin-top: 45px;
   }
 }
 
@@ -39,6 +37,9 @@
   @include mq(small_laptop) {
     order: 1;
     margin-right: 60px;
+  }
+  @include mq(large_laptop) {
+    margin-right: 90px;
   }
   @include mq(small_monitor) {
     margin-right: 141px;

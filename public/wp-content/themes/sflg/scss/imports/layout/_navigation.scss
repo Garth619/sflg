@@ -96,9 +96,13 @@ nav {
         }
         &:hover {
           > a {
-            color: $orangedark;
+            @include mq(small_laptop) {
+              color: $orangedark;
+            }
             &::after {
-              @include tri(down, 4px, 6px, $orangedark);
+              @include mq(small_laptop) {
+                @include tri(down, 4px, 6px, $orangedark);
+              }
             }
           }
           > ul.sub-menu {
@@ -120,6 +124,40 @@ nav {
       > li.current-menu-item {
         > a {
           color: $orangedark;
+        }
+      }
+    }
+  }
+}
+
+// homepage is listed as a location page under about menu item. Turn off the current menu item color on the homepage so "home" and "about us" both
+// dont have current states
+
+body.page-template-template-home {
+  nav {
+    .menu-header {
+      ul {
+        > li.current-menu-ancestor {
+          &.menu-item-1772 {
+            > a {
+              color: $black;
+              &::after {
+                @include tri(down, 4px, 6px, $black);
+              }
+            }
+            &:hover {
+              > a {
+                @include mq(small_laptop) {
+                  color: $orangedark;
+                }
+                &::after {
+                  @include mq(small_laptop) {
+                    @include tri(down, 4px, 6px, $orangedark);
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -1,6 +1,10 @@
 #section-five {
   padding: 42px 30px;
   overflow: hidden;
+  margin-top: -2px;
+  background: $white;
+  position: relative;
+  z-index: 1;
   @include mq(small_tablet) {
     padding: 28px 80px 0;
   }
@@ -71,10 +75,10 @@
   @include mq(large_laptop) {
     margin-top: 75px;
     margin-right: -34px;
+    margin-left: 80px;
   }
   @include mq(small_monitor) {
     margin-right: 0px;
-    margin-left: 80px;
     margin-top: -115px;
   }
 }
