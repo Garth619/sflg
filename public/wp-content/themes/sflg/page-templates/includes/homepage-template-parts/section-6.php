@@ -20,8 +20,8 @@
         <source media='(min-width: 768px)' srcset='<?php echo $section_six_image['url']; ?>'>
         <?php }?>
         <?php $section_six_image_mobile = get_field('section_six_image_mobile');?>
-        <img id='sec-six-img' class='lazyload' data-src="<?php echo $section_six_image_mobile['url']; ?>"
-          alt="<?php echo $section_six_image_mobile['alt']; ?>" width='669' height='799' loading='lazy' />
+        <img id='sec-six-img' data-src="<?php echo $section_six_image_mobile['url']; ?>"
+          alt="<?php echo $section_six_image_mobile['alt']; ?>" width='669' height='799' />
       </picture>
     </div><!-- sec-six-img-wrapper -->
     <div id='sec-six-content-wrapper'>
@@ -36,7 +36,6 @@
           <!-- button-two -->
         </div><!-- info-box-inner -->
       </div><!-- sec-six-content -->
-    </div><!-- sec-six-play-inner -->
-  </div><!-- sec-six-content-wrapper -->
+    </div><!-- sec-six-content-wrapper -->
   </div><!-- sec-six-inner -->
 </section><!-- section-six -->

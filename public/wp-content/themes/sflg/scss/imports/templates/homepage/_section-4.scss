@@ -132,6 +132,12 @@
 .sec-four-single-slide {
   height: 100%;
   position: relative;
+  @include mq(small_monitor) {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  &:last-of-type {
+    border-right: none;
+  }
   a {
     text-decoration: none;
     &:hover {

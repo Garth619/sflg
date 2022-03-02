@@ -37,11 +37,10 @@ if (is_front_page()) {
   href="<?php echo $section_one_background_mobile_webp['url']; ?>" />
 <?php }?>
 <link rel="preload" as="image" type="image/svg+xml"
-  href="https://sflgnew.local/wp-content/themes/sflg/images/hero-wave.svg" />
+  href="<?php bloginfo('template_directory');?>/images/hero-wave.svg" />
 <link rel="preload" as="image" type="image/svg+xml"
-  href="https://sflgnew.local/wp-content/themes/sflg/images/test-stars.svg" />
-<link rel="preload" as="image" type="image/svg+xml"
-  href="https://sflgnew.local/wp-content/themes/sflg/images/arrow.svg" />
+  href="<?php bloginfo('template_directory');?>/images/test-stars.svg" />
+<link rel="preload" as="image" type="image/svg+xml" href="<?php bloginfo('template_directory');?>/images/arrow.svg" />
 <?php
 }
 $logo_new = get_field('logo_new', 'option');

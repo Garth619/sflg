@@ -109,9 +109,18 @@
       );
       &.mynext,
       &.myprev {
+        position: relative;
+        margin: 0;
         @include flex(null, center);
         @include abs(0, null, null, null);
+        a {
+          position: relative;
+          z-index: 1;
+          @include box(57px, 18px);
+        }
         svg {
+          position: absolute;
+          top: 0;
           @include box(9px, 17px);
           path {
             fill: $purpledark;
@@ -133,12 +142,17 @@
       &.mynext {
         right: 0;
         svg {
+          right: 0;
           margin-left: 20px;
         }
       }
       &.myprev {
         left: 0;
+        a {
+          padding-left: 26px;
+        }
         svg {
+          left: 0;
           transform: rotate(180deg);
           margin-right: 20px;
         }

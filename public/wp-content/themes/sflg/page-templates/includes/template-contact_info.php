@@ -22,7 +22,7 @@
     <a href='<?php the_field('pay_image_link', 'option');?>' target='_blank' rel='noopener'>
       <?php $pay_image = get_field('pay_image', 'option');?>
       <img id='lawpay' class="lazyload" data-src="<?php echo $pay_image['url']; ?>"
-        alt="<?php echo $pay_image['alt']; ?>" loading='lazy' />
+        alt="<?php echo $pay_image['alt']; ?>" width='146' height='65' loading="lazy" />
     </a>
   </div><!-- contact-col-inner -->
 </div><!-- contact-col -->

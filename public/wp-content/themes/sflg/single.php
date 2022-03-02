@@ -25,7 +25,6 @@ echo $pfx_date;?></span>
           <!-- post-date -->
         </div><!-- post-meta -->
         <div class='content'><?php the_content();?></div>
-        <?php get_template_part('page-templates/includes/template', 'infoslider_component');?>
       </div><!-- page-content-inner -->
     </div><!-- page-content -->
     <?php if (!get_field('disable_sidebar')) {

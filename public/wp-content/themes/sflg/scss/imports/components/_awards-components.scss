@@ -25,11 +25,19 @@
 body.page-template-template-debraschoenberg {
   .awards-component {
     max-width: none;
+    @include mq(small_tablet) {
+      padding-bottom: 70px;
+    }
+    @include mq(small_laptop) {
+      padding-bottom: 95px;
+    }
+    @include mq(large_laptop) {
+      padding-bottom: 120px;
+    }
     @include mq(small_monitor) {
       position: relative;
       left: -120px;
       width: calc(100% + 199px);
-      padding-bottom: 100px;
     }
   }
 }

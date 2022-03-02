@@ -464,6 +464,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -1707,12 +1708,26 @@ img.aligncenter {
 body.page-template-template-debraschoenberg .awards-component {
   max-width: none;
 }
+@media screen and (min-width: 768px) {
+  body.page-template-template-debraschoenberg .awards-component {
+    padding-bottom: 70px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  body.page-template-template-debraschoenberg .awards-component {
+    padding-bottom: 95px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  body.page-template-template-debraschoenberg .awards-component {
+    padding-bottom: 120px;
+  }
+}
 @media screen and (min-width: 1650px) {
   body.page-template-template-debraschoenberg .awards-component {
     position: relative;
     left: -120px;
     width: calc(100% + 199px);
-    padding-bottom: 100px;
   }
 }
 
@@ -2053,7 +2068,7 @@ body.page-template-template-debraschoenberg .awards-component {
 }
 
 .single-video-title-wrapper {
-  padding: 8px 25px 8px 10px;
+  padding: 8px 25px 8px 16px;
 }
 @media screen and (min-width: 768px) {
   .single-video-title-wrapper {
@@ -4726,6 +4741,14 @@ img#hero-image {
   height: 100%;
   position: relative;
 }
+@media screen and (min-width: 1650px) {
+  .sec-four-single-slide {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+.sec-four-single-slide:last-of-type {
+  border-right: none;
+}
 .sec-four-single-slide a {
   text-decoration: none;
 }
@@ -6544,12 +6567,22 @@ img#sec-six-img {
   text-decoration: none;
 }
 #paged-wrapper ul li.mynext, #paged-wrapper ul li.myprev {
+  position: relative;
+  margin: 0;
   display: flex;
   align-items: center;
   position: absolute;
   top: 0;
 }
+#paged-wrapper ul li.mynext a, #paged-wrapper ul li.myprev a {
+  position: relative;
+  z-index: 1;
+  width: 57px;
+  height: 18px;
+}
 #paged-wrapper ul li.mynext svg, #paged-wrapper ul li.myprev svg {
+  position: absolute;
+  top: 0;
   width: 9px;
   height: 17px;
 }
@@ -6571,12 +6604,17 @@ img#sec-six-img {
   right: 0;
 }
 #paged-wrapper ul li.mynext svg {
+  right: 0;
   margin-left: 20px;
 }
 #paged-wrapper ul li.myprev {
   left: 0;
 }
+#paged-wrapper ul li.myprev a {
+  padding-left: 26px;
+}
 #paged-wrapper ul li.myprev svg {
+  left: 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-right: 20px;
