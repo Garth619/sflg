@@ -509,56 +509,6 @@ img#lawpay {
   }
 }
 
-#calc {
-  border: 1px solid $purpledark;
-  text-decoration: none;
-  background: transparent;
-  border-radius: 60px;
-  padding: 6px 10px;
-  @include box(225px, 37px);
-  transition: all 200ms ease-in-out;
-  @include margin_lr();
-  @include flex(center, center);
-  @include mq(small_tablet) {
-    margin-left: 0;
-    margin-right: 30px;
-  }
-  @include mq(small_laptop) {
-    margin-right: 20px;
-  }
-  svg {
-    margin-right: 7px;
-    @include box(18px, 23px);
-    path {
-      fill: $purpledark;
-      transition: all 200ms ease-in-out;
-    }
-  }
-  span {
-    transition: all 200ms ease-in-out;
-    @include type(
-      (
-        size: 14px,
-        height: 14px,
-        family: $secondaryfont,
-        color: $purpledark,
-        weight: 700,
-      )
-    );
-  }
-  &:hover {
-    background: $purpledark;
-    svg {
-      path {
-        fill: $white;
-      }
-    }
-    span {
-      color: $white;
-    }
-  }
-}
-
 #ilawyer {
   margin-top: 35px;
   display: inline-block;

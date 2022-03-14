@@ -345,5 +345,16 @@ function my_acf_init_block_types()
             'supports' => array('mode' => false),
             'keywords' => array('awards'),
         ));
+        acf_register_block_type(array(
+            'name' => 'childcalculator',
+            'title' => __('Child Support Calculator'),
+            'description' => __('A custom child support calculator block.'),
+            'render_template' => 'page-templates/includes/template-childcalculator_component.php',
+            'category' => 'formatting',
+            'icon' => 'calculator',
+            'mode' => 'edit',
+            'supports' => array('mode' => false),
+            'keywords' => array('calculator'),
+        ));
     }
 }

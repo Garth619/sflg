@@ -1102,6 +1102,68 @@ img.aligncenter {
   color: #7575cf;
 }
 
+.calc {
+  border: 1px solid #5b59ad;
+  text-decoration: none;
+  background: transparent;
+  border-radius: 60px;
+  padding: 6px 34px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: auto;
+  height: 37px;
+  transition: all 200ms ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .calc {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .calc {
+    margin-right: 20px;
+  }
+}
+.calc svg {
+  margin-right: 7px;
+  width: 18px;
+  height: 23px;
+}
+.calc svg path {
+  fill: #5b59ad;
+  transition: all 200ms ease-in-out;
+}
+.calc span {
+  transition: all 200ms ease-in-out;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Oswald", sans-serif;
+  color: #5b59ad;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+.calc:hover {
+  background: #5b59ad;
+}
+.calc:hover svg path {
+  fill: #fff;
+}
+.calc:hover span {
+  color: #fff;
+}
+
+.internal-calc {
+  margin-bottom: 30px;
+}
+
 .info-box-wrapper {
   display: flex;
   justify-content: space-between;
@@ -4082,61 +4144,6 @@ a#directions:hover {
     justify-content: center;
     align-items: center;
   }
-}
-
-#calc {
-  border: 1px solid #5b59ad;
-  text-decoration: none;
-  background: transparent;
-  border-radius: 60px;
-  padding: 6px 10px;
-  width: 225px;
-  height: 37px;
-  transition: all 200ms ease-in-out;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (min-width: 768px) {
-  #calc {
-    margin-left: 0;
-    margin-right: 30px;
-  }
-}
-@media screen and (min-width: 1170px) {
-  #calc {
-    margin-right: 20px;
-  }
-}
-#calc svg {
-  margin-right: 7px;
-  width: 18px;
-  height: 23px;
-}
-#calc svg path {
-  fill: #5b59ad;
-  transition: all 200ms ease-in-out;
-}
-#calc span {
-  transition: all 200ms ease-in-out;
-  font-size: 14px;
-  line-height: 14px;
-  font-family: "Oswald", sans-serif;
-  color: #5b59ad;
-  font-weight: 700;
-  font-style: normal;
-  text-decoration: none;
-}
-#calc:hover {
-  background: #5b59ad;
-}
-#calc:hover svg path {
-  fill: #fff;
-}
-#calc:hover span {
-  color: #fff;
 }
 
 #ilawyer {

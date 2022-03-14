@@ -11,9 +11,10 @@
       </div><!-- info-arrow-left -->
       <div class='infoslider-slides-wrapper'>
         <div class='infoslider-slides full-width-three-slides'>
-          <?php
-$myPostNumber = get_field('section_seven_latest_news_and_blog');
-$mymain_query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => $myPostNumber, 'order' => 'DSC'));while ($mymain_query->have_posts()): $mymain_query->the_post();?>
+          <?php $section_seven_latest_news_and_blog_new = get_field('section_seven_latest_news_and_blog_new');?>
+          <?php if ($section_seven_latest_news_and_blog_new): ?>
+          <?php foreach ($section_seven_latest_news_and_blog_new as $post): ?>
+          <?php setup_postdata($post);?>
           <div class='infoslider-single-slide'>
             <div class='infoslider-single-slide-inner'>
               <div class='info-slider-blog-title-wrapper'>
@@ -30,7 +31,7 @@ $mymain_query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => $m
                   Posted In
                   <?php echo get_the_category_list(); ?></span>
                 <span class='post-date'> On <?php $pfx_date = get_the_date();
-    echo $pfx_date;?></span>
+echo $pfx_date;?></span>
                 <!-- post-date -->
               </div><!-- post-meta -->
               <span class='infoslider-slide-descrip'><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></span>
@@ -39,8 +40,9 @@ $mymain_query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => $m
               <!-- button-two sec-seven-read-more -->
             </div><!-- infoslider-single-slide-inner -->
           </div><!-- infoslider-single-slide -->
-          <?php endwhile;?>
-          <?php wp_reset_postdata(); // reset the query ?>
+          <?php endforeach;?>
+          <?php wp_reset_postdata();?>
+          <?php endif;?>
         </div><!-- infoslider-slides -->
       </div><!-- infoslider-slides-wrapper -->
       <div class='info-arrow info-arrow-right full-width-three-slides-right'>

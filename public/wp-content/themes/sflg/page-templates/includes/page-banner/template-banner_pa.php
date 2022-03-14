@@ -9,7 +9,14 @@
     <span id='banner-title'><?php the_field('banner_title');?></span>
     <!-- banner-title -->
     <?php else: ?>
-    <span id='banner-title'><?php the_field('global_internal_banner_title', 'option');?></span>
+    <?php $globalTitles = get_field('global_internal_banner_titles', 'option');
+
+if (is_array($globalTitles)) {
+    shuffle($globalTitles);
+}
+
+?>
+    <span id='banner-title'><?php echo $globalTitles[0]['title']; ?></span>
     <!-- banner-title -->
     <?php endif;?>
     <?php endif;?>
