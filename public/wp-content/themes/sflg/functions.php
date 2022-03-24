@@ -356,5 +356,16 @@ function my_acf_init_block_types()
             'supports' => array('mode' => false),
             'keywords' => array('calculator'),
         ));
+        acf_register_block_type(array(
+            'name' => 'faqsflg',
+            'title' => __('FAQs'),
+            'description' => __('A custom FAQs block.'),
+            'render_template' => 'page-templates/includes/template-faqs.php',
+            'category' => 'formatting',
+            'icon' => 'testimonial',
+            'mode' => 'edit',
+            'supports' => array('mode' => false),
+            'keywords' => array('faqs'),
+        ));
     }
 }
