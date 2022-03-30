@@ -19,9 +19,6 @@
   }
 }
 
-#sec-five-inner {
-}
-
 #sec-five-top {
   @include mq(small_laptop) {
     @include flex();
@@ -58,10 +55,6 @@
     font-size: 45px;
     line-height: 50px;
   }
-  @include mq(large_laptop) {
-    // font-size: 50px;
-    // line-height: 55px;
-  }
 }
 
 #sec-five-top-sidebar {
@@ -85,11 +78,9 @@
 
 #sec-five-sidebar-img {
   img {
-    //width: 330px;
     display: block;
     position: relative;
     max-width: 100%;
-    //left: -15px;
     height: auto;
     @include margin_lr();
     @include mq(small_tablet) {
@@ -128,48 +119,9 @@
   }
 }
 
-.sec-five-arrow {
-  // width: calc(50% - 1px);
-  // background: $purpledark;
-  // padding: 11px 0;
-  // cursor: pointer;
-  // transition: all 200ms ease-in-out;
-  // @include flex(center, center);
-  // img {
-  //   @include image();
-  //   @include box(15px, 30px);
-  // }
-  // &:hover {
-  //   background: $purplelight;
-  // }
-}
-
-.sec-five-arrow-left {
-  // order: 2;
-  // img {
-  //   transform: rotate(-180deg);
-  // }
-}
-
-.sec-five-arrow-right {
-  // order: 3;
-}
-
 #sec-five-sp {
-  //background: $white;
-  //box-shadow: 0px 3px 40px #cdcfd1;
-  // padding: 28px;
-  // width: 100%;
   order: 1;
   margin-bottom: 20px;
-}
-
-#sec-five-sp-inner {
-  //border: 1px solid $orangedark;
-  //padding: 0 3px 45px;
-}
-
-#sec-five-sp-slider {
 }
 
 .sec-five-single-sp {
@@ -186,8 +138,6 @@
   }
   @include mq(small_laptop) {
     padding: 51px 23px 10px;
-  }
-  .dots-wrapper {
   }
 }
 
@@ -230,8 +180,6 @@
 
 .sec-five-single-sp-descrip {
   padding-top: 25px;
-  p {
-  }
 }
 
 #sec-five-sp-counter {
@@ -281,6 +229,7 @@
 
 #sec-five-info-box {
   a {
+    cursor: pointer;
     display: block;
     padding: 45px 25px 40px;
     text-decoration: none;

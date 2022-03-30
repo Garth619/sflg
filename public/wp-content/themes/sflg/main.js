@@ -130,16 +130,7 @@ jQuery(document).ready(function ($) {
   );
   createWaypoint("section-six", "#section-six", "visible", 250, null, true);
   createWaypoint("section-eight", "#section-eight", "visible", 250, null, true);
-  // createWaypoint(
-  //   "awards-component",
-  //   "#awards-component",
-  //   "visible",
-  //   250,
-  //   null,
-  //   true
-  // );
   createWaypoint("about-bottom", "#about-bottom", "visible", 250, null, true);
-  // createWaypoint("internal-main", "body", "sticky", 85, null, true);
 
   /**
    * Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)
@@ -388,6 +379,19 @@ jQuery(document).ready(function ($) {
     prevArrow: ".sec-five-arrow-left",
     nextArrow: ".sec-five-arrow-right",
     dots: false,
+  });
+
+  /**
+   * Section Five Info Box Overlay
+   */
+  $("#sec-five-info-box a").on("click", function (e) {
+    $("#sec-five-overlay").fadeIn();
+    $("html,body").css("overflow-y", "hidden");
+  });
+
+  $("#sec-five-close").on("click", function (e) {
+    $("#sec-five-overlay").fadeOut();
+    $("html,body").css("overflow-y", "scroll");
   });
 
   /**

@@ -59,7 +59,7 @@
       <div id='sec-five-info-box-wrapper'>
         <div id='sec-five-info-box' class='info-box'>
           <div class='info-box-inner'>
-            <a href='<?php the_field('section_five_info_box_link');?>' target='_blank' rel='noopener'>
+            <a>
               <div id='sec-five-info-box-left'>
                 <?php $section_five_info_box_image = get_field('section_five_info_box_image');?>
                 <?php if ($section_five_info_box_image) {?>
@@ -90,3 +90,12 @@
     </div><!-- sec-five-bottom -->
   </div><!-- sec-five-inner -->
 </section><!-- section-five -->
+<div id='sec-five-overlay'>
+  <div id='sec-five-overlay-inner' class='info-box content'>
+    <div class='info-box-inner'>
+      <span id='sec-five-close'>Close</span>
+      <h2 id='sec-five-overlay-title'>Request a Copy</h2>
+      <?php gravity_form(3, false, false, false, '', true, 13);?>
+    </div>
+  </div>
+</div>

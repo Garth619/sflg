@@ -1,0 +1,287 @@
+#sec-five-overlay {
+  background: rgba(#000, 0.7);
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  @include box(100%, 100%);
+  @include fixed(0, null, null, 0, 10);
+  display: none;
+  @media screen and (min-width: 500px) {
+    padding: 30px;
+  }
+  @include mq(small_tablet) {
+    padding: 70px 30px;
+  }
+  @include mq(small_laptop) {
+    padding: 100px 30px;
+  }
+  @include mq(large_laptop) {
+  }
+}
+
+#sec-five-overlay-inner {
+  background: $white;
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  max-width: 500px;
+  box-shadow: none;
+  @include margin_lr();
+  @include mq(small_laptop) {
+    max-width: 770px;
+  }
+  @include mq(large_laptop) {
+    max-width: 900px;
+  }
+  .info-box-inner {
+    padding: 30px 20px 50px;
+    @include mq(small_laptop) {
+      padding: 30px 50px 50px;
+    }
+    .gform_validation_errors {
+      display: none;
+    }
+    .gform_wrapper.gravity-theme {
+      max-width: 828px;
+      @include margin_lr();
+      @include mq(small_laptop) {
+        margin-top: 35px;
+      }
+      .gfield_description {
+        font-family: $secondaryfont;
+      }
+      .validation_message {
+        padding: 12px 10px;
+      }
+      .gform_fields {
+        grid-row-gap: 0px !important;
+        display: block !important;
+        grid-column-gap: 0 !important;
+        @include mq(small_tablet) {
+          display: flex !important;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+      }
+      .gfield {
+        position: relative;
+        margin-bottom: 14px !important;
+        grid-column: none !important;
+        @include mq(small_tablet) {
+          flex-basis: calc(50% - 5px);
+          margin-bottom: 11px !important;
+        }
+        @include mq(small_laptop) {
+          margin-bottom: 17px !important;
+          flex-basis: calc(33% - 7px);
+        }
+        &::after {
+          @include abs(24px, 10px, null, null);
+          @include contentdisplay(block, "*");
+          @include type(
+            (
+              size: 17px,
+              family: $primaryfont,
+              weight: 700,
+              color: $orangedark,
+            )
+          );
+        }
+        .gfield_label {
+          display: none;
+        }
+        input,
+        textarea {
+          padding: 0px 20px 0 12px;
+          border: none;
+          height: 63px;
+          width: 100%;
+          border-radius: 6px;
+          border: 1px #cacaca solid;
+          @include type(
+            (
+              size: 17px,
+              family: $secondaryfont,
+              color: $black,
+            )
+          );
+        }
+        select {
+          padding: 18px 20px 18px 12px;
+          border: 1px #cacaca solid;
+          border-radius: 6px;
+          background: $white;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          @include type(
+            (
+              size: 17px,
+              family: $secondaryfont,
+              color: $black,
+            )
+          );
+        }
+        textarea {
+          height: 178px;
+          padding: 20px 20px 0 12px;
+        }
+        input::placeholder,
+        textarea::placeholder {
+          color: $black;
+          opacity: 1;
+        }
+      }
+      #field_3_4 {
+        @include mq(small_tablet) {
+          flex-basis: 100%;
+        }
+        &::after {
+          display: none;
+        }
+        .ginput_complex {
+          label {
+            display: none;
+          }
+          span {
+            margin-bottom: 14px !important;
+            position: relative;
+            @include mq(small_laptop) {
+              margin-bottom: 17px !important;
+            }
+            &#input_3_4_3_container,
+            &#input_3_4_5_container {
+              &::after {
+                @include mq(small_laptop) {
+                  right: 20px;
+                }
+              }
+            }
+            &::after {
+              @include abs(24px, 10px, null, null);
+              @include contentdisplay(block, "*");
+              @include type(
+                (
+                  size: 17px,
+                  family: $primaryfont,
+                  weight: 700,
+                  color: $orangedark,
+                )
+              );
+            }
+          }
+        }
+      }
+      #field_3_3 {
+        @include mq(small_tablet) {
+          flex-basis: 100%;
+        }
+        @include mq(small_laptop) {
+          flex-basis: calc(33% - 7px);
+        }
+      }
+      #field_3_5 {
+        flex-basis: 100%;
+      }
+      #field_3_15 {
+        @include mq(small_laptop) {
+          flex-basis: 100%;
+        }
+      }
+      .gfield_html {
+        width: 100%;
+        &::after {
+          display: none;
+        }
+      }
+      .my-required {
+        display: block;
+        @include type(
+          (
+            size: 17px,
+            height: 17px,
+            color: $white,
+            family: $secondaryfont,
+            weight: 500,
+            transform: uppercase,
+          )
+        );
+      }
+      .gform_footer {
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.15);
+        transition: background 200ms ease-in-out;
+        padding: 12px;
+        @include box(155px, 84px);
+        @include margin_lr();
+        @include mq(small_laptop) {
+          margin-top: -10px;
+        }
+        &:hover {
+          background: rgba(255, 255, 255, 0.6);
+          input[type="submit"] {
+            background: linear-gradient(
+              to bottom,
+              rgba(250, 181, 107, 1) 0%,
+              rgb(196, 125, 49) 75%
+            );
+          }
+        }
+        input[type="submit"] {
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          background: $oranegradient;
+          margin-bottom: 0;
+          border-radius: 50px;
+          transition: background 200ms ease-in-out;
+          @include box(131px, 60px);
+          @include box(100%, 100%);
+          @include margin_lr();
+          @include type(
+            (
+              size: 20px,
+              family: $secondaryfont,
+              color: $white,
+              weight: 500,
+              align: center,
+              transform: uppercase,
+            )
+          );
+        }
+        .gform_validation_errors {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#sec-five-close {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  @include abs(40px, 50px, null, null);
+  @include type(
+    (
+      size: 17px,
+      family: $secondaryfont,
+      color: $purpledark,
+      weight: 500,
+    )
+  );
+  @include mq(small_laptop) {
+    font-size: 20px;
+    top: 50px;
+    right: 79px;
+  }
+  &:hover {
+    color: $orangedark;
+  }
+}
+
+#sec-five-overlay-title {
+  text-align: center;
+  padding: 35px 30px 0px;
+  @include mq(small_laptop) {
+    font-size: 30px;
+    padding: 60px 30px 0px;
+  }
+}
